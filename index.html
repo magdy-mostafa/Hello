@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="ar"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>موقعي البسيط</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1826;--accent:#06b6d4;--muted:#94a3b8;--text:#e6eef6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071627 0%, #0f2a3a 100%);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:var(--accent);display:grid;place-items:center;font-weight:700;color:#042027}
+    nav{display:flex;gap:14px}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px}
+    .container{width:min(1100px,92%);margin:18px auto;}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:center}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{margin-top:14px;display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#022; font-weight:600;text-decoration:none}
+    .side{padding:18px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:18px}
+    .feature{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02)}
+    footer{margin-top:auto;padding:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.side{order:2}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">م</div>
+      <div>
+        <div style="font-weight:700">موقعي البسيط</div>
+        <div style="font-size:12px;color:var(--muted)">صفحة ويب تجريبية</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#features">المميزات</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>أهلاً بك في موقعي</h1>
+        <p class="lead">هذه صفحة HTML بسيطة تحتوي على تصميم نظيف، بعض الأنماط، وروابط سريعة — جاهزة للتعديل والنشر.</p>
+        <a class="cta" href="#contact">ابدأ الآن</a><div class="features" id="features">
+      <div class="feature">
+        <strong>خفيف وسريع</strong>
+        <div style="font-size:13px;color:var(--muted)">صفحة واحدة فقط بدون مكتبات خارجية.</div>
+      </div>
+      <div class="feature">
+        <strong>مستجيب</strong>
+        <div style="font-size:13px;color:var(--muted)">يتكيّف مع الشاشات الصغيرة والكبيرة.</div>
+      </div>
+      <div class="feature">
+        <strong>قابل للتخصيص</strong>
+        <div style="font-size:13px;color:var(--muted)">غيّر النصوص، الألوان، أو أضف صور بسهولة.</div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="card side">
+    <h3 style="margin-top:0">معلومات سريعة</h3>
+    <p style="margin:6px 0;color:var(--muted)">حفظ الملف باسم <code>index.html</code> وافتحه في المتصفح لمعاينته.</p>
+    <div style="margin-top:12px">
+      <strong>نصائح نشر:</strong>
+      <ul style="padding-left:18px;color:var(--muted)">
+        <li>استخدم GitHub Pages: أنشئ repo وادفع الملف لفرع <code>main</code>.</li>
+        <li>أو احفظه محليًا وافتحه مباشرة مع المتصفح.</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section id="contact" style="margin-top:18px">
+  <div class="card">
+    <h3>تواصل</h3>
+    <p style="color:var(--muted);margin:6px 0">أدخل إيميلك في الحقل (توضيحي فقط)</p>
+    <form onsubmit="event.preventDefault(); alert('تم الإرسال (محاكاة)')">
+      <input placeholder="email@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-bottom:8px">
+      <button style="padding:10px 12px;border-radius:8px;border:none;background:var(--accent);font-weight:600;cursor:pointer">أرسل</button>
+    </form>
+  </div>
+</section>
+
+  </main>  <footer>
+    صنع بحب — نسخة تجريبية بسيطة
+  </footer>  <script>
+    // سكربت صغير لو احتجت تفاعلات لاحقاً
+    console.log('Simple index loaded')
+  </script></body>
+</html>
